@@ -73,9 +73,7 @@
                                 </div>
                                 <div class="w3-col l6 l6 m6 w3-margin-bottom">
                                     <div class="w3-display-container w3-padding w3-panel">
-                                        <div class="w3-large">
-                                            <b>SmartParts</b> allow easy and fast scripting of complex geometries and therefore suit best for repetitive static elements within the project.
-                                        </div>
+                                        <div class="w3-large" id="smartparts"/>
                                         <div class="w3-center w3-xxlarge">
                                             <b>60€/hr</b>
                                         </div>
@@ -85,9 +83,7 @@
                             <div class="w3-row-padding" style="height:50%">
                                 <div class="w3-col l6 l6 m6 w3-margin-bottom">
                                     <div class="w3-display-container w3-padding w3-panel">
-                                        <div class="w3-large">
-                                            <b>PythonParts</b> built upon the scripting language Python within Allplan are best for parametric objects and automatization of easy recurring tasks.
-                                        </div>
+                                        <div class="w3-large" id="pythonparts"/>
                                         <div class="w3-center w3-xxlarge">
                                             <b>75€/hr</b>
                                         </div>
@@ -95,9 +91,7 @@
                                 </div>
                                 <div class="w3-col l6 m6 w3-margin-bottom">
                                     <div class="w3-display-container w3-padding w3-panel">
-                                        <div class="w3-large">
-                                            <b>NOI Allplan API</b> is the most flexible and performant interface for creating reliable Add-Ons within Allplan. This interface gives direct access to the allplan internals opening up virtually unlimited application options.
-                                        </div>
+                                        <div class="w3-large" id="allplanapi"/>
                                         <div class="w3-center w3-xxlarge">
                                             <b>85€/hr</b>
                                         </div>
@@ -128,7 +122,27 @@
     <footer class="w3-center w3-black w3-padding-16">
         <p>Copyright © 2021 cadaddons.com - All Rights Reserved</p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        function setLanguage() {
+            var stringTable;
+            var lang = navigator.language || navigator.userLanguage;
+            alert(lang);
+            if (!lang)
+                lang = 'de';
+            else
+                lang = lang.split('-')[0];
+            $.ajax({
+                url: lang + '.json',
+                dataType: 'json',
+                async: false,
+                success: function (table) { stringTable = table }
+            });
+
+            $('#smartparts').html(stringTable.allplan.smartparts);
+            $('#pythonparts').html(stringTable.allplan.pythonparts);
+            $('#allplanapi').html(stringTable.allplan.allplanapi);
+        }
         var slideIndex = 1;
         showDivs(slideIndex);
 
@@ -155,6 +169,9 @@
             x[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " w3-white";
         }
+        $(document).ready(function () {
+            setLanguage();
+        });
     </script>
 </body>
 </html>
