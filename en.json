@@ -1,7 +1,7 @@
 {
   "allplan": {
-    "smartparts": "<b>SmartParts</b> allow easy and fast scripting of complex geometries and therefore suit best for repetitive static elements within the project.",
-    "pythonparts": "<b>PythonParts</b> built upon the scripting language Python within Allplan are best for parametric objects and automatization of easy recurring tasks.",
-    "allplanapi": "<b>NOI Allplan API</b> is the most flexible and performant interface for creating reliable Add-Ons within Allplan. This interface gives direct access to the allplan internals opening up virtually unlimited application options."
+    "smartparts": "",
+    "pythonparts": "",
+    "allplanapi": ""
   }
 }

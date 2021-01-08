@@ -6,30 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Anton&family=Roboto:wght@900&family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bb5a7d9157.js" crossorigin="anonymous"></script>
     <style>
         .navbar.collapse {
             height: 72px !important;
         }
-
         .carousel-item {
             height: 100% !important; /* Fallback for browsers do NOT support vh unit */
             height: 100vh !important; /* These two lines are counted as one :-)       */
             height: calc(100% - 72px) !important; /*  */
             height: calc(100vh - 72px) !important; /* */
         }
-
-            .carousel-item img {
-                object-fit: cover;
-            }
-
+        .carousel-item img {
+            object-fit: cover;
+        }
         .roboto {
             font-family: 'Roboto', sans-serif !important;
         }
         .anton {
             font-family: 'Anton', sans-serif !important;
+        }
+        .roboto-mono {
+            font-family: 'Roboto Mono', monospace;
         }
     </style>
 </head>
@@ -46,8 +45,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#allplan">Allplan Add-On</a>
@@ -64,14 +66,14 @@
             <div class="carousel-item active">
                 <img class="d-block h-100 w-100" src="img/header1.jpg" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="display-4 anton text-uppercase">Automate Repetative<br/>Improve Quality<br/>Boost Efficiency</div>
+                    <div class="display-4 anton text-uppercase">Automate Repetative<br />Improve Quality<br />Boost Efficiency</div>
                     <div class="h4">CAD Add-Ons by cadaddons.com</div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block h-100 w-100" src="img/header2.jpg" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="display-4 anton text-body text-uppercase">Allplan<br/>Add-In<br/>Technology</div>
+                    <div class="display-4 anton text-body text-uppercase">Allplan<br />Add-In<br />Technology</div>
                     <div class="h4">Get in contact and order an Allplan Plugin made with either SmartParts, PythonParts or the NOI Allplan API.</div>
                 </div>
             </div>
@@ -92,33 +94,69 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <!-- About -->
+    <div class="jumbotron jumbotron-fluid m-3 p-5 rounded" id="about">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="row h-100">
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex border rounded bg-white">
+                        <div class="h1 m-auto align-self-center text-center">About</div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border border-white rounded">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">CAD Add-On Development</div> is what we do best. Our products range from simple construction tools over direct exports to CNC milling machines from your CAD software of choice up to plugins connecting with the web. Private Add-Ons pricing is based on hourly rates and public ones on flat-rate licensing per workstation.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border border-white rounded">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">CAD Modeling</div> remains our second pillar. We do the vast majority of modeling tasks in the shortest possible time, therefore keeping costs low, but still with best quality and reliability. Modeling jobs a purely based on hourly rates.
+                        </div>
+                        <div class="mt-auto align-self-center h2">
+                            <b>54€/hr</b>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border rounded bg-white">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">CAD Export</div> to construction machines, web browsers, VR or AR, etc. is our newest focus towards time-cost optimization in industry - price on request.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 p-0">
+                <img class="h-100 w-100" src="img/logo1024x1024.png" alt="">
+            </div>
+        </div>
+    </div>
     <!-- Allplan -->
     <div class="jumbotron jumbotron-fluid m-3 p-5 rounded" id="allplan">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
-                <img class="w-100 h-100" src="img/logo1024x1024.png" alt="">
+                <img class="h-100 w-100" src="img/allplan.jpeg" alt="">
             </div>
             <div class="col-lg-6 col-sm-12">
                 <div class="row h-100">
-                    <div class="col-lg-5 col-sm-12 p-3 ml-2 mb-2 mr-2 d-flex border rounded bg-white">
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex border rounded bg-white">
                         <div class="h1 m-auto align-self-center text-center">Allplan Add-In Technology</div>
                     </div>
-                    <div class="col-lg-5 col-sm-12 p-3 ml-2 mb-2 mr-2 d-flex align-items-start flex-column border border-white rounded">
-                        <div class="h6" id="smartparts">
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border border-white rounded">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">SmartParts</div> allow easy and fast scripting of complex geometries and therefore suit best for repetitive static elements within the project.
                         </div>
                         <div class="mt-auto align-self-center h2">
                             <b>60€/hr</b>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-sm-12 p-3 ml-2 mt-2 mr-2 d-flex align-items-start flex-column border border-white rounded">
-                        <div class="h6" id="pythonparts">
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border border-white rounded">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">PythonParts</div> built upon the scripting language Python within Allplan are best for parametric objects and automatization of easy recurring tasks.
                         </div>
                         <div class="mt-auto align-self-center h2">
                             <b>75€/hr</b>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-sm-12 p-3 ml-2 mt-2 mr-2 d-flex align-items-start flex-column border rounded bg-white">
-                        <div class="h6" id="allplanapi">
+                    <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-start flex-column border rounded bg-white">
+                        <div class="h6 roboto-mono">
+                            <div class="h5 roboto font-weight-bold">NOI Allplan API</div> is the most flexible and performant interface for creating reliable Add-Ons within Allplan. This interface gives direct access to the allplan internals opening up virtually unlimited application options.
                         </div>
                         <div class="mt-auto align-self-center h2">
                             <b>85€/hr</b>
@@ -273,14 +311,14 @@
                 async: false,
                 success: function (table) { stringTable = table }
             });
-
-            $('#smartparts').html(stringTable.allplan.smartparts);
-            $('#pythonparts').html(stringTable.allplan.pythonparts);
-            $('#allplanapi').html(stringTable.allplan.allplanapi);
         }
+
         $(document).ready(function () {
             setLanguage();
-
+            $("a.nav-link").on("click", function () {
+                $("a.nav-link").removeClass("active");
+                $(this).addClass("active");
+            });
         });
     </script>
 </body>
