@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bb5a7d9157.js" crossorigin="anonymous"></script>
     <style>
         .navbar.collapse {
@@ -19,11 +20,16 @@
             height: calc(100% - 72px) !important; /*  */
             height: calc(100vh - 72px) !important; /* */
         }
-        .carousel-item img {
-            object-fit: cover;
-        }
+
+            .carousel-item img {
+                object-fit: cover;
+            }
+
         .roboto {
             font-family: 'Roboto', sans-serif !important;
+        }
+        .anton {
+            font-family: 'Anton', sans-serif !important;
         }
     </style>
 </head>
@@ -58,22 +64,22 @@
             <div class="carousel-item active">
                 <img class="d-block h-100 w-100" src="img/header1.jpg" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="h2">CAD Add-Ons by cadaddons.com</div>
-                    <p class="text-uppercase h4">Automate Repetative - Improve Quality - Boost Efficiency</p>
+                    <div class="display-4 anton text-uppercase">Automate Repetative<br/>Improve Quality<br/>Boost Efficiency</div>
+                    <div class="h4">CAD Add-Ons by cadaddons.com</div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block h-100 w-100" src="img/header2.jpg" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h2>Allplan Add-In Technology</h2>
-                    <p>Get in contact and order an Allplan Plugin made with either SmartParts, PythonParts or the NOI Allplan API.</p>
+                    <div class="display-4 anton text-body text-uppercase">Allplan<br/>Add-In<br/>Technology</div>
+                    <div class="h4">Get in contact and order an Allplan Plugin made with either SmartParts, PythonParts or the NOI Allplan API.</div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block h-100 w-100" src="img/header3.jpg" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h2>Heart Of the Alps</h2>
-                    <p>We are located in Innsbruck in the heart of the Alps.</p>
+                    <div class="display-4 anton text-uppercase">Heart<br />Of the<br />Alps</div>
+                    <div class="h4">We are located in Innsbruck in the heart of the Alps.</div>
                 </div>
             </div>
         </div>
