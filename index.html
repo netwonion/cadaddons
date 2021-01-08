@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb5a7d9157.js" crossorigin="anonymous"></script>
     <style>
         .navbar {
             height: 72px !important;
@@ -96,7 +97,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <!-- Page content -->
+    <!-- Allplan -->
     <div class="jumbotron jumbotron-fluid m-3 p-5 rounded" id="allplan">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
@@ -132,27 +133,85 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <!-- Contact Section -->
-        <div class="w3-container w3-padding-32" id="contact">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-            <p>Get in touch and discuss about your next project.</p>
-            <form action="/action_page.php" target="_blank">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-                <textarea class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Message" rows="10" cols="30"></textarea>
-                <button class="w3-button w3-black w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i>SEND
-                </button>
-            </form>
+    <!-- Contact -->
+    <div class="jumbotron jumbotron-fluid m-3 p-5 rounded" id="contact">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 rounded d-flex flex-column">
+                <div class="mr-auto mb-auto p-lg-5 p-2 rounded bg-white">
+                    <div>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt fa-fw"></i><b>Address</b></p>
+                        <p class="mt-0 "><i class="fas fa-map-marker-alt fa-fw invisible"></i>6020 Innsbruck, Austria</p>
+                    </div>
+                    <div>
+                        <p class="mb-0"><i class="fas fa-envelope fa-fw"></i><b>Email Support</b></p>
+                        <p class="mt-0 "><i class="fas fa-envelope fa-fw invisible"></i>cadaddons@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="mb-0"><i class="fas fa-mobile-alt fa-fw"></i><b>Phone Support</b></p>
+                        <p class="mt-0 "><i class="fas fa-mobile-alt fa-fw invisible"></i>+43 660 4774 208</p>
+                    </div>
+                    <div>
+                        <p class="mb-0"><i class="far fa-clock fa-fw"></i><b>Opening Hours</b></p>
+                        <p class="mt-0 "><i class="far fa-clock fa-fw invisible"></i>Mo-Sa 09:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <label for="organization" class="form-label">Organization</label>
+                        <input type="text" class="form-control" id="organization" placeholder="Enter Organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input class="form-control" list="subjectOptions" id="subject" placeholder="Enter Subject">
+                        <datalist id="subjectOptions">
+                            <option value="Add-On">
+                            <option value="Archicad Add-On">
+                            <option value="cadwork Add-On">
+                            <option value="Allplan Add-On">
+                            <option value="AutoCAD Add-On">
+                            <option value="Private Add-On Pricing">
+                            <option value="Public Add-On License">
+                            <option value="Support">
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="9" placeholder="Enter Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="form-label">Attachments</label>
+                        <input class="form-control-file" type="file" id="file" multiple>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="agreepsu" required>
+                            <label class="form-check-label" for="agreepsu">
+                                I agree to my data being processed, stored and used.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Footer -->
     <footer class="bg-light text-center text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)!important">
         <div class="container p-4">
             <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 d-flex">
+                <div class="col-lg-4 col-md-12 mb-4 d-flex">
                     <p class="m-auto">
                         <span class="font-italic">"You can dream, create, design, and build the most wonderful place in the world. But it requires people to make the dream a reality."</span> - Walt Disney
                     </p>
