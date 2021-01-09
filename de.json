@@ -1,7 +1,0 @@
-{
-  "allplan": {
-    "smartparts": "<b>SmartParts</b> erm\u00F6glichen ein schnelles Ergebnis f\u00FCr komplexe Geometrien und sind somit die bew\u00E4hrte Methode f\u00FCr immer wiederkehrende statische Objekte innerhalb eines Projektes.",
-    "pythonparts": "<b>PythonParts</b> basieren auf die Skriptsprache Python und eignen sich besonders f\u00FCr parametrisierbare Objekte.",
-    "allplanapi": "<b>NOI Allplan API</b> agiert direkt mit den Allplan Internen Bibliotheken und ist somit die m\u00E4chtigste Methode Allplan Add-Ons zu erstellen mit nahezu unbegrenzten Anwendungs- und Einsatzm\u00F6glichkeiten."
-  }
-}
