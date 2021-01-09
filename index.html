@@ -293,25 +293,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
-        function setLanguage() {
-            var stringTable;
+        function languageNavigator() {
             var lang = navigator.language || navigator.userLanguage;
             if (!lang)
-                lang = 'de';
+                return;
             else
                 lang = lang.split('-')[0];
-            if (lang != 'en' && lang != 'de')
-                lang = 'en';
-            $.ajax({
-                url: lang + '.json',
-                dataType: 'json',
-                async: false,
-                success: function (table) { stringTable = table }
-            });
+
+            if (lang == 'de')
+                window.location.replace('https://cadaddons.com/de/');
         }
 
         $(document).ready(function () {
-            setLanguage();
+            languageNavigator();
             $("a.nav-link").on("click", function () {
                 $("a.nav-link").removeClass("active");
                 $(this).addClass("active");
